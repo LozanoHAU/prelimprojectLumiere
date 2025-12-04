@@ -1,1 +1,124 @@
-<p>employee works!</p>
+<div class="employee-container">
+  <div class="header-section">
+    <h1>Our Team</h1>
+    <p class="subtitle">Meet the talented professionals behind Lumière</p>
+  </div>
+
+  <div class="filter-section">
+    <h3>Filter by Status:</h3>
+    <div class="filter-buttons">
+      <button 
+        (click)="setFilter('All')" 
+        [class.active]="filterStatus() === 'All'"
+        class="filter-btn">
+        All Employees
+      </button>
+      <button 
+        (click)="setFilter('Active')" 
+        [class.active]="filterStatus() === 'Active'"
+        class="filter-btn">
+        Active
+      </button>
+      <button 
+        (click)="setFilter('On Leave')" 
+        [class.active]="filterStatus() === 'On Leave'"
+        class="filter-btn">
+        On Leave
+      </button>
+      <button 
+        (click)="setFilter('Inactive')" 
+        [class.active]="filterStatus() === 'Inactive'"
+        class="filter-btn">
+        Inactive
+      </button>
+    </div>
+  </div>
+
+  <div class="employee-grid">
+    @if (filteredEmployees.length > 0) {
+      @for (employee of filteredEmployees; track employee.employeeNumber) {
+        <div class="employee-card">
+          <div class="card-header">
+            <div class="employee-avatar">
+              <!-- FIXED: Using helper method instead of arrow function -->
+              {{ getInitials(employee.fullName) }}
+            </div>
+            <div class="employee-basic-info">
+              <h2>{{ employee.fullName }}</h2>
+              <p class="employee-number">{{ employee.employeeNumber }}</p>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="info-row">
+              <span class="label">Position:</span>
+              <span class="value">{{ employee.position }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">Department:</span>
+              <span class="value">{{ employee.department }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">Gender:</span>
+              <span class="value">{{ employee.gender }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">Email:</span>
+              <span class="value email">{{ employee.email }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">Status:</span>
+              <span [class]="'status-badge ' + getStatusClass(employee.employmentStatus)">
+                {{ employee.employmentStatus }}
+              </span>
+            </div>
+
+            <div class="info-row">
+              <span class="label">Salary:</span>
+              @if (employee.salary >= 100000) {
+                <span class="value salary high-salary">{{ formatSalary(employee.salary) }}</span>
+              } @else {
+                <span class="value salary">{{ formatSalary(employee.salary) }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    } @else {
+      <div class="no-results">
+        <div class="no-results-icon">🔍</div>
+        <h3>No employees found</h3>
+        <p>There are no employees matching the selected filter.</p>
+      </div>
+    }
+  </div>
+
+  <div class="summary-section">
+    <h3>Team Summary</h3>
+    <div class="summary-stats">
+      <div class="summary-stat">
+        <div class="stat-value">{{ employees().length }}</div>
+        <div class="stat-label">Total Employees</div>
+      </div>
+      <div class="summary-stat">
+        <!-- FIXED: Using computed signal -->
+        <div class="stat-value">{{ activeCount() }}</div>
+        <div class="stat-label">Active</div>
+      </div>
+      <div class="summary-stat">
+        <!-- FIXED: Using computed signal -->
+        <div class="stat-value">{{ leaveCount() }}</div>
+        <div class="stat-label">On Leave</div>
+      </div>
+      <div class="summary-stat">
+        <!-- FIXED: Using computed signal -->
+        <div class="stat-value">{{ inactiveCount() }}</div>
+        <div class="stat-label">Inactive</div>
+      </div>
+    </div>
+  </div>
+</div>
