@@ -2,6 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: #02000A;
 }
 
 .services-header {
@@ -11,16 +12,20 @@
 }
 
 .services-header h1 {
+  font-family: "Bitcount Grid Double", monospace;
   font-size: 3rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(93, 68, 149, 0.8);
 }
 
 .lead {
-  font-size: 1.25rem;
-  color: #4b5563;
+  font-family: "Finlandica", cursive;
+  font-size: 1.3rem;
+  color: #F5ECFF;
   max-width: 600px;
   margin: 0 auto;
+  opacity: 0.9;
 }
 
 .services-grid {
@@ -31,48 +36,56 @@
 }
 
 .service-card {
-  background: white;
+  background: linear-gradient(135deg, #280F51 0%, #421867 100%);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(93, 68, 149, 0.3);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  border: 1px solid #5D4495;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(93, 68, 149, 0.5);
 }
 
 .service-card.featured {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-  color: white;
+  background: linear-gradient(135deg, #060122 0%, #421867 50%, #280F51 100%);
+  color: #F5ECFF;
   grid-column: span 1;
+  border: 2px solid #5D4495;
+  box-shadow: 0 0 20px rgba(93, 68, 149, 0.6);
 }
 
 .service-card.featured h2,
 .service-card.featured p,
 .service-card.featured li {
-  color: white;
+  color: #F5ECFF;
 }
 
 .service-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(93, 68, 149, 0.8));
 }
 
 .service-card h2 {
+  font-family: "National Park", sans-serif;
   font-size: 1.5rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 1rem;
 }
 
 .service-card p {
-  color: #4b5563;
+  font-family: "Finlandica", cursive;
+  font-size: 1.1rem;
+  color: #F5ECFF;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  opacity: 0.9;
 }
 
 .service-features {
@@ -82,50 +95,59 @@
 }
 
 .service-features li {
+  font-family: "Finlandica", cursive;
+  font-size: 1.05rem;
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #4b5563;
+  color: #F5ECFF;
+  opacity: 0.9;
 }
 
 .service-features li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #10b981;
+  color: #5D4495;
   font-weight: bold;
+  filter: drop-shadow(0 0 5px rgba(93, 68, 149, 0.8));
 }
 
 .service-card.featured .service-features li::before {
-  color: #93c5fd;
+  color: #F5ECFF;
 }
 
 .service-price {
+  font-family: "National Park", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: #F5ECFF;
   padding-top: 1rem;
-  border-top: 2px solid #e5e7eb;
+  border-top: 2px solid #5D4495;
   text-align: center;
+  text-shadow: 0 0 10px rgba(93, 68, 149, 0.6);
 }
 
 .service-card.featured .service-price {
-  color: white;
-  border-top-color: rgba(255, 255, 255, 0.3);
+  color: #F5ECFF;
+  border-top-color: rgba(245, 236, 255, 0.3);
 }
 
 .process-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #060122 0%, #280F51 100%);
   padding: 3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  border: 1px solid #5D4495;
 }
 
 .process-section h2 {
+  font-family: "National Park", sans-serif;
   text-align: center;
   font-size: 2.5rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 3rem;
+  text-shadow: 0 0 15px rgba(93, 68, 149, 0.6);
 }
 
 .process-steps {
@@ -139,65 +161,78 @@
 }
 
 .step-number {
+  font-family: "Bitcount Grid Double", monospace;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #3b82f6;
-  color: white;
+  background: #5D4495;
+  color: #F5ECFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 1rem;
+  box-shadow: 0 0 15px rgba(93, 68, 149, 0.8);
 }
 
 .process-step h3 {
+  font-family: "National Park", sans-serif;
   font-size: 1.25rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 0.5rem;
 }
 
 .process-step p {
-  color: #4b5563;
+  font-family: "Finlandica", cursive;
+  font-size: 1.05rem;
+  color: #F5ECFF;
   line-height: 1.6;
+  opacity: 0.9;
 }
 
 .cta-section {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-  color: white;
+  background: linear-gradient(135deg, #060122 0%, #421867 50%, #280F51 100%);
+  color: #F5ECFF;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(93, 68, 149, 0.4);
+  border: 2px solid #5D4495;
 }
 
 .cta-section h2 {
+  font-family: "National Park", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(93, 68, 149, 0.8);
 }
 
 .cta-section p {
-  font-size: 1.25rem;
+  font-family: "Finlandica", cursive;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   opacity: 0.95;
 }
 
 .cta-button {
+  font-family: "National Park", sans-serif;
   display: inline-block;
   padding: 1rem 3rem;
-  background: white;
-  color: #1e3a8a;
+  background: #5D4495;
+  color: #F5ECFF;
   text-decoration: none;
   border-radius: 0.5rem;
   font-weight: 700;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(93, 68, 149, 0.5);
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(93, 68, 149, 0.6);
+  background: #421867;
 }
 
 @media screen and (max-width: 768px) {

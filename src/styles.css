@@ -1,4 +1,13 @@
-/* Global Styles */
+/* Global Styles - Dark Mode */
+:root {
+  --lavender-veil: #F5ECFF;
+  --prussian-blue: #060122;
+  --indigo-ink: #421867;
+  --dark-amethyst: #280F51;
+  --black: #02000A;
+  --dusty-grape: #5D4495;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +16,30 @@
 
 html, body {
   height: 100%;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+  font-family: "Finlandica", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background-color: #f8fafc;
-  color: #1f2937;
+  background-color: var(--black);
+  color: var(--lavender-veil);
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "National Park", sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
 
+h1 {
+  font-family: "Bitcount Grid Double", monospace;
+}
+
 p {
   margin-bottom: 1rem;
+  font-family: "Finlandica", cursive;
 }
 
 a {
@@ -45,6 +59,6 @@ html {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--dusty-grape);
   outline-offset: 2px;
 }

@@ -1,14 +1,13 @@
 <style>
   :host {
-    --primary-color: #1e3a8a;
-    --secondary-color: #3b82f6;
-    --accent-color: #60a5fa;
-    --text-color: #1f2937;
-    --bg-light: #f8fafc;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --lavender-veil: #F5ECFF;
+    --prussian-blue: #060122;
+    --indigo-ink: #421867;
+    --dark-amethyst: #280F51;
+    --black: #02000A;
+    --dusty-grape: #5D4495;
 
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif;
+    font-family: "Finlandica", cursive;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -19,13 +18,14 @@
   }
 
   .header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--prussian-blue) 0%, var(--indigo-ink) 50%, var(--dark-amethyst) 100%);
+    color: var(--lavender-veil);
     padding: 1rem 2rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 6px -1px rgba(93, 68, 149, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid var(--indigo-ink);
   }
 
   .header-content {
@@ -37,16 +37,19 @@
   }
 
   .logo {
+    font-family: "Bitcount Grid Double", monospace;
     font-size: 1.75rem;
     font-weight: 700;
     letter-spacing: -0.025em;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--lavender-veil);
   }
 
   .logo-icon {
     font-size: 2rem;
+    filter: drop-shadow(0 0 10px var(--dusty-grape));
   }
 
   nav {
@@ -55,7 +58,8 @@
   }
 
   nav a {
-    color: white;
+    font-family: "National Park", sans-serif;
+    color: var(--lavender-veil);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;
@@ -64,24 +68,28 @@
   }
 
   nav a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(93, 68, 149, 0.3);
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(93, 68, 149, 0.4);
   }
 
   nav a.active {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--indigo-ink);
+    box-shadow: 0 0 15px rgba(93, 68, 149, 0.5);
   }
 
   .main-content {
     min-height: calc(100vh - 180px);
+    background-color: var(--black);
   }
 
   .footer {
-    background: var(--primary-color);
-    color: white;
+    background: var(--prussian-blue);
+    color: var(--lavender-veil);
     padding: 2rem;
     text-align: center;
     margin-top: 3rem;
+    border-top: 2px solid var(--indigo-ink);
   }
 
   .footer-content {
@@ -90,8 +98,13 @@
   }
 
   .footer p {
+    font-family: "Finlandica", cursive;
     margin: 0.5rem 0;
     opacity: 0.9;
+  }
+
+  .footer strong {
+    font-family: "National Park", sans-serif;
   }
 
   @media screen and (max-width: 768px) {
@@ -130,6 +143,7 @@
 
 <main class="main-content">
   <router-outlet />
+  
 </main>
 
 <footer class="footer">

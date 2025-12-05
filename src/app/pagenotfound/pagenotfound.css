@@ -4,22 +4,25 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #02000A 0%, #280F51 100%);
+  margin-bottom: -50px;
 }
 
 .notfound-content {
   text-align: center;
   max-width: 600px;
-  background: white;
+  background: linear-gradient(135deg, #280F51 0%, #421867 100%);
   padding: 4rem 3rem;
   border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(93, 68, 149, 0.4);
+  border: 2px solid #5D4495;
 }
 
 .notfound-icon {
   font-size: 5rem;
   margin-bottom: 1rem;
   animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(93, 68, 149, 0.9));
 }
 
 @keyframes float {
@@ -32,24 +35,29 @@
 }
 
 .notfound-title {
+  font-family: "Bitcount Grid Double", monospace;
   font-size: 8rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin: 0;
   line-height: 1;
+  text-shadow: 0 0 30px rgba(93, 68, 149, 0.9);
 }
 
 .notfound-subtitle {
+  font-family: "National Park", sans-serif;
   font-size: 2rem;
-  color: #3b82f6;
+  color: #F5ECFF;
   margin: 1rem 0;
 }
 
 .notfound-message {
-  font-size: 1.1rem;
-  color: #4b5563;
+  font-family: "Finlandica", cursive;
+  font-size: 1.2rem;
+  color: #F5ECFF;
   line-height: 1.6;
   margin-bottom: 2.5rem;
+  opacity: 0.9;
 }
 
 .notfound-actions {
@@ -62,6 +70,7 @@
 
 .btn-primary,
 .btn-secondary {
+  font-family: "National Park", sans-serif;
   padding: 0.875rem 2rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -71,36 +80,39 @@
 }
 
 .btn-primary {
-  background: #3b82f6;
-  color: white;
+  background: #5D4495;
+  color: #F5ECFF;
+  box-shadow: 0 0 15px rgba(93, 68, 149, 0.5);
 }
 
 .btn-primary:hover {
-  background: #2563eb;
+  background: #421867;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 20px rgba(93, 68, 149, 0.6);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #3b82f6;
-  border: 2px solid #3b82f6;
+  color: #F5ECFF;
+  border: 2px solid #F5ECFF;
 }
 
 .btn-secondary:hover {
-  background: #3b82f6;
-  color: white;
+  background: #F5ECFF;
+  color: #280F51;
 }
 
 .notfound-links {
-  border-top: 2px solid #e5e7eb;
+  border-top: 2px solid #5D4495;
   padding-top: 2rem;
 }
 
 .notfound-links p {
-  color: #6b7280;
+  font-family: "National Park", sans-serif;
+  color: #F5ECFF;
   margin-bottom: 1rem;
   font-weight: 600;
+  opacity: 0.9;
 }
 
 .quick-nav {
@@ -111,14 +123,16 @@
 }
 
 .quick-nav a {
-  color: #3b82f6;
+  font-family: "Finlandica", cursive;
+  font-size: 1.1rem;
+  color: #F5ECFF;
   text-decoration: none;
-  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .quick-nav a:hover {
-  color: #1e3a8a;
+  color: #5D4495;
+  text-shadow: 0 0 10px rgba(93, 68, 149, 0.8);
   text-decoration: underline;
 }
 
@@ -136,7 +150,7 @@
   }
 
   .notfound-message {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .notfound-actions {

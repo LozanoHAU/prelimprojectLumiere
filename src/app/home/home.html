@@ -1,5 +1,9 @@
 <div class="home-container">
-  <section class="hero">
+  <section class="hero hero-video-section">
+  <video autoplay muted loop playsinline class="hero-bg-video">
+      <source src="/herovid.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
     <div class="hero-content">
       <h1>Illuminate Your Events with Lumière</h1>
       <p class="tagline">Premium Drone Light Display Services</p>
@@ -47,15 +51,15 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
-          <div class="stat-number">500+</div>
+          <div class="stat-number">100</div>
           <div class="stat-label">Events Completed</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">300</div>
+          <div class="stat-number">500+</div>
           <div class="stat-label">Drones in Fleet</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">50+</div>
+          <div class="stat-number">30</div>
           <div class="stat-label">Team Members</div>
         </div>
         <div class="stat-item">
@@ -65,4 +69,98 @@
       </div>
     </div>
   </section>
+
+    <br><br><br>
+    
+<section class="showcase-section">
+    <div class="container-fluid"> <!-- Changed to fluid for more width -->
+      <div class="showcase-header">
+        <h2>Delight and inspire your audience</h2>
+        <p>Our cutting edge aerial light shows can tell your story with an unforgettable blend of artistry and emotion.</p>
+      </div>
+
+      <div class="slider-wrapper">
+        <!-- Navigation Arrow Left -->
+        <button class="slider-nav prev" id="prevBtn">&#10094;</button>
+
+        <!-- The Slides Track -->
+        <div class="slider-track" id="sliderTrack">
+          <!-- Slide 1 -->
+          <div class="slide-item placeholder-1"></div>
+          <!-- Slide 2 -->
+          <div class="slide-item placeholder-2"></div>
+          <!-- Slide 3 -->
+          <div class="slide-item placeholder-3"></div>
+          <!-- Slide 4 -->
+          <div class="slide-item placeholder-4"></div>
+          <!-- Slide 5 -->
+          <div class="slide-item placeholder-5"></div>
+        </div>
+
+        <!-- Navigation Arrow Right -->
+        <button class="slider-nav next" id="nextBtn">&#10095;</button>
+      </div>
+
+      <!-- Pagination Dots -->
+      <div class="slider-dots" id="sliderDots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script to make arrows and dots work -->
+       <script>
+    (function() {
+      const track = document.getElementById('sliderTrack');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dots = document.querySelectorAll('.dot');
+      
+      // Function to scroll slide by slide
+      // On desktop we show 2 slides, so we scroll 50% of the track view
+      // On mobile we show 1 slide, so we scroll 100%
+      const scrollAmount = () => {
+        const slideItem = track.querySelector('.slide-item');
+        return slideItem.offsetWidth + 24; // 24 is the gap size (1.5rem)
+      };
+
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+      });
+
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+      });
+
+      // Optional: Click dots to navigate
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+           const itemWidth = scrollAmount();
+           track.scrollTo({ left: itemWidth * index, behavior: 'smooth' });
+        });
+      });
+
+      // Update Active Dot on Scroll
+      track.addEventListener('scroll', () => {
+        const itemWidth = scrollAmount();
+        const scrollPosition = track.scrollLeft;
+        // Calculate index (rounded)
+        const activeIndex = Math.round(scrollPosition / itemWidth);
+        
+        dots.forEach((dot, idx) => {
+          if(idx === activeIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      });
+    })();
+  </script>
+
 </div>
+

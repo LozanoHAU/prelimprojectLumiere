@@ -1,24 +1,30 @@
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #02000A;
 }
 
 .about-hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-  color: white;
+  background: linear-gradient(135deg, #060122 0%, #421867 50%, #280F51 100%);
+  color: #F5ECFF;
   text-align: center;
   padding: 4rem 2rem;
   margin-bottom: 3rem;
+  border-bottom: 2px solid #5D4495;
 }
 
 .about-hero h1 {
+  font-family: "Bitcount Grid Double", monospace;
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(93, 68, 149, 0.8);
 }
 
 .tagline {
+  font-family: "National Park", sans-serif;
   font-size: 1.5rem;
   opacity: 0.95;
+  color: #F5ECFF;
 }
 
 .about-content {
@@ -30,25 +36,30 @@ section {
 }
 
 section h2 {
+  font-family: "National Park", sans-serif;
   font-size: 2.5rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 2rem;
   text-align: center;
+  text-shadow: 0 0 15px rgba(93, 68, 149, 0.6);
 }
 
 .story-section p {
-  font-size: 1.1rem;
+  font-family: "Finlandica", cursive;
+  font-size: 1.2rem;
   line-height: 1.8;
-  color: #4b5563;
+  color: #F5ECFF;
   margin-bottom: 1.5rem;
   text-align: justify;
+  opacity: 0.9;
 }
 
 .mission-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  background: linear-gradient(135deg, #280F51 0%, #421867 100%);
   padding: 3rem;
   border-radius: 1rem;
   margin: 3rem 0;
+  border: 1px solid #5D4495;
 }
 
 .mission-grid {
@@ -58,21 +69,26 @@ section h2 {
 }
 
 .mission-card {
-  background: white;
+  background: #060122;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(93, 68, 149, 0.3);
+  border: 1px solid #5D4495;
 }
 
 .mission-card h3 {
+  font-family: "National Park", sans-serif;
   font-size: 1.5rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 1rem;
 }
 
 .mission-card p {
-  color: #4b5563;
+  font-family: "Finlandica", cursive;
+  font-size: 1.1rem;
+  color: #F5ECFF;
   line-height: 1.6;
+  opacity: 0.9;
 }
 
 .mission-card ul {
@@ -81,18 +97,22 @@ section h2 {
 }
 
 .mission-card li {
+  font-family: "Finlandica", cursive;
+  font-size: 1.1rem;
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #4b5563;
+  color: #F5ECFF;
+  opacity: 0.9;
 }
 
 .mission-card li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #10b981;
+  color: #5D4495;
   font-weight: bold;
+  filter: drop-shadow(0 0 5px rgba(93, 68, 149, 0.8));
 }
 
 .benefits-grid {
@@ -104,39 +124,45 @@ section h2 {
 .benefit-item {
   text-align: center;
   padding: 1.5rem;
-  background: white;
+  background: linear-gradient(135deg, #280F51 0%, #421867 100%);
   border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(93, 68, 149, 0.3);
   transition: all 0.3s ease;
+  border: 1px solid #5D4495;
 }
 
 .benefit-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(93, 68, 149, 0.5);
 }
 
 .benefit-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(93, 68, 149, 0.8));
 }
 
 .benefit-item h4 {
+  font-family: "National Park", sans-serif;
   font-size: 1.25rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 0.75rem;
 }
 
 .benefit-item p {
-  color: #4b5563;
+  font-family: "Finlandica", cursive;
+  font-size: 1.05rem;
+  color: #F5ECFF;
   line-height: 1.6;
-  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
 .achievements-section {
-  background: white;
+  background: linear-gradient(135deg, #060122 0%, #280F51 100%);
   padding: 3rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(93, 68, 149, 0.3);
+  border: 1px solid #5D4495;
 }
 
 .achievements-grid {
@@ -148,44 +174,52 @@ section h2 {
 .achievement-card {
   text-align: center;
   padding: 1.5rem;
-  border-left: 4px solid #3b82f6;
-  background: #f8fafc;
+  border-left: 4px solid #5D4495;
+  background: #421867;
   border-radius: 0.5rem;
 }
 
 .achievement-year {
+  font-family: "Bitcount Grid Double", monospace;
   font-size: 2rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: #F5ECFF;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(93, 68, 149, 0.8);
 }
 
 .achievement-card h4 {
+  font-family: "National Park", sans-serif;
   font-size: 1.1rem;
-  color: #1e3a8a;
+  color: #F5ECFF;
   margin-bottom: 0.5rem;
 }
 
 .achievement-card p {
-  color: #4b5563;
-  font-size: 0.9rem;
+  font-family: "Finlandica", cursive;
+  font-size: 1.05rem;
+  color: #F5ECFF;
   line-height: 1.5;
+  opacity: 0.9;
 }
 
 .team-section {
   text-align: center;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-  color: white;
+  background: linear-gradient(135deg, #060122 0%, #421867 50%, #280F51 100%);
+  color: #F5ECFF;
   border-radius: 1rem;
+  border: 1px solid #5D4495;
 }
 
 .team-section h2 {
-  color: white;
+  color: #F5ECFF;
+  text-shadow: 0 0 15px rgba(93, 68, 149, 0.8);
 }
 
 .team-intro {
-  font-size: 1.1rem;
+  font-family: "Finlandica", cursive;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   opacity: 0.95;
   max-width: 700px;
@@ -198,20 +232,23 @@ section h2 {
 }
 
 .link-button {
+  font-family: "National Park", sans-serif;
   display: inline-block;
   padding: 1rem 2rem;
-  background: white;
-  color: #1e3a8a;
+  background: #5D4495;
+  color: #F5ECFF;
   text-decoration: none;
   border-radius: 0.5rem;
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(93, 68, 149, 0.5);
 }
 
 .link-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(93, 68, 149, 0.6);
+  background: #421867;
 }
 
 @media screen and (max-width: 768px) {
